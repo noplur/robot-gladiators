@@ -155,9 +155,21 @@ var randomNumber = function(min, max) {
 
 /* GAME INFORMATION / VARIABLES */
 
-// player information
+// function to set name
+var getPlayerName = function() {
+  var name = "";
 
-var playerInfo = {
+  while (name === "" || name === null) {
+    name = prompt("What is your robot's name?");
+  }
+
+  console.log(""Your robot's name is "" + name);
+  return name;
+};
+
+/* GAME INFORMATION / VARIABLES */
+  var playerInfo = {
+  name: getPlayerName(),
   name: window.prompt("What is your robot's name?"),
   health: 100,
   attack: 10,
